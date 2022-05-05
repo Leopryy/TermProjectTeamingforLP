@@ -1,5 +1,5 @@
 from flask import Flask,render_template, request
-
+from find import finaEVS
 
 
 app = Flask(__name__)
@@ -8,9 +8,10 @@ app = Flask(__name__)
 @app.route('/', methods=["GET","POST"])
 def show_Location():
     if request.method == "POST":
-        location = request.form['location']
-        station, wheelchair_accessible = find_stop_near(location)
-        return render_template('OutPage.html', location=station, wheelchair_accessible=wheelchair_accessible)
+        Sta = request.form['Sta']
+        loc = request.form['loc']
+        maps, table = finaEVS(Sta,loc)
+        return render_template('OutPage.html', result = maps.show())
     else:
         return render_template('FirstPage.html')
 
