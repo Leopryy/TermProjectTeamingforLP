@@ -28,3 +28,8 @@ The biggest challenge for me is whether I can find enough data and information f
 
 # Additional Course Content: What are some topics that we might cover in class that you think would be especially helpful for your project?
 I think that the course has provided us with the sufficient information to do the project. We have also covered the information for writing other code with python.
+
+# How to used the Web page
+The v1(3).csv must be included since it contain the EV charging station information that will be needed when the website create the map. 
+User just simply need to import the city and state name that he or she located in and the website will return the result on the map. Moreover when 
+they hover the mouse on the map dot, they will get more information about the charging station, like the location, station name, operating hour, and type of station.
